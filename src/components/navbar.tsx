@@ -53,80 +53,40 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
+    url: "https://www.certicode.tech",
+    src: "/certicode_icon.png",
     alt: "logo",
-    title: "Shadcnblocks.com",
+    title: "Certicode",
   },
   menu = [
     { title: "Home", url: "#" },
     {
-      title: "Products",
-      url: "#",
+      title: "Property Management",
+      url: "",
       items: [
-        {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
+        { title: "Residents", url: "#" },
+        { title: "Condo Units", url: "#" },
+        { title: "Amenities", url: "#" },
       ],
     },
     {
-      title: "Resources",
-      url: "#",
+      title: "Operations",
+      url: "",
       items: [
-        {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
+        { title: "Bookings", url: "#" },
+        { title: "Maintenance", url: "#" },
       ],
     },
     {
-      title: "Pricing",
-      url: "#",
+      title: "Finance",
+      url: "",
+      items: [
+        { title: "Payments", url: "#" },
+        { title: "Reports", url: "#" },
+      ],
     },
     {
-      title: "Blog",
+      title: "Settings",
       url: "#",
     },
   ],
@@ -136,7 +96,7 @@ const Navbar1 = ({
   },
 }: Navbar1Props) => {
   return (
-    <section className="py-4 w-full">
+    <section className="py-4 w-full flex ml-8">
       <div className="container">
         {/* Desktop Menu */}
         <nav className="hidden justify-between lg:flex">
@@ -246,7 +206,7 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="bg-background hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
+        className="hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
       >
         {item.title}
       </NavigationMenuLink>
